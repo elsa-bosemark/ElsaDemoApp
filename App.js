@@ -7,6 +7,7 @@ export default function App() {
     <View style={styles.container}>
       {/* 2- change text (attributes)*/}
       <Text style={styles.title}>Elsa Bosemark</Text>
+      <Text>myemail@gmail.com</Text>
       <StatusBar style="auto" />
     </View>
   );
