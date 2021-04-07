@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Linking} from 'react-native'
+import { Linking } from 'react-native'
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 
@@ -10,17 +10,21 @@ export default function App() {
       <Image
         style={styles.portrait}
         source={{
-          uri: 'https://lh3.googleusercontent.com/F_qPMyGWAGIfGFUYcn1Fh_O-Z12yzAOqvrzx99FM7hxL3J0b7EHXExJmUwiOGWHUJmHeTA_exznv8bJ3bkisKCHWY8-7vZcV9vxYR04jYFka8-9GZZa51VnOJljlgCpRRDf0Om5lnAb8pXsNe7E5s7EVn6qhxn3Sfan9kiMNwuGKnxef12ITZWmdscMdzqBZtR-aTP5ZYr44UP9uEDgsTtEOPeyNuu-XLI73SCc5KLJ2iTOziiJJjdhgV9eGPiczi01KYuOYbvNXMlc-8LX83c7qKnlLTaF6aqIsiIbktBRPYRGSoBsXnc4Bri5GxRVxPnBmu7BbewzNZCSu3QZ7InDK2zw_gnerZFiVd7pfzr9YP9plBBcvW-CkvDwIi4pjtvT3VkUIu7XSBRP5IOZiuWJh6vkL3wbMWrCd-3bFNLGIx6XzzL3oki471zvHb34M6GQOBb4DzjMFnqhu_jOUKDqpjPnimKBM6kCq_607EwOWozXtoaMCLxZz94Mndybn6C7IWlu4Hpo7-JQX8xREKIT8BX5udMPqlF3Laz94RNm7mGZgkMKi96h0REXtMPO6n7oYwWB1PzRt5xklMsmzjxpoJ_Kubb7Mk5rk9t2OzZGa1VwziBbU_Gs79TFp4c6XX0OiXbYMdU4Oe_75G4PbeK2-ke5ez0mX6iNEIBVDJYrjykbmzQbYEmu9HlH_0rR0-1r_8UDrbs1MNvH4BwSd2fI=s514-no?authuser=0'
+          uri: 'https://lh3.googleusercontent.com/PTXKvo0fb6pjZiGfkq8MFvYaViJzC2p_4MVYVtsy365Lue1lrQt6u680qI4AdvkvyhOxRmceLkkWZOSZsiFO9SdV0wYax_JmXhXtT14orHqQcwM96OfXjZg-c2b6QX5ZUgunrUtQi7kTl0am8TOoaryyqizLVPuY7XJOghcd2HXxTAtx091pT6yYkF8jI1jErNSTMmwNkXAziAIz1osCu5URqMAPbozlaQ04iybnYTEIuDvSfcEwRTO9UactOQNW_-diztacqlLuvLMYo1ydzsq5jM9jSsKfpCU1FLoJaFvUBd-SQ_fxIyHMkJA9q5MTlabgUOOhn70yGeF74m57UO4QJj6YVcFDyWJozy2rIR1NXviMqvGAxucIiPXAwOucE1S9t088Ag1XP6jSqrzKRKkSg5_v8Bzs9nKLp09rAk7s25yDzLGYBaiujtooY6slmKV_VloW-r7inPaiPxPK4ikt8O8oL9Nv2PlTwY4QkcxpG4h37F8pNajk2COJCBEyYTD4t5h1jxuBgjLvFHv0tV-F7Yfvz1ikg0ka_ZLXBK2XmajFfbQ81DY1eSYj4QGhg_mdMSuadSofi_6WXjwCXxBZkc-C2j4wGnZ6Mq4Uh6mm0k3MFBqG-uzxoH9z8cKYyOdiKr5g9YGjYoTXIYw892jfW-z-T0zfcqIrnG4lwbwXD5sAixUa0o71n-orrXcV-prPIxU5LW2dhT8h4f-evDQ=s514-no?authuser=0'
         }}
       />
       <Text style={styles.title}>Elsa Bosemark</Text>
       <Text style={styles.email}>myemail@gmail.com</Text>
       <TouchableOpacity
-        onPress={()=>{Linking.openURL('http://elsabosemark.weebly.com/');}}
+        onPress={() => { Linking.openURL('http://elsabosemark.weebly.com/'); }}
         style={styles.button}
       >
-        <Text  style={styles.buttonText}>Check out my website</Text>
+        <Text style={styles.buttonText}>Check out my website</Text>
       </TouchableOpacity>
+      <ScrollView style={styles.prompt}>
+        <Text style={styles.promptTitle}>Why did you want to learn mobile app development</Text>
+        <Text style={styles.promptText}>I regularly use mobile apps and wanted to learn how they were created. I was introduced to mobile app development when I join a Girls In Tech Club at my school. I am a self taught student and primary code using React Native. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id risus odio. Pellentesque dignissim arcu justo, in fermentum felis faucibus eget. Etiam aliquam dapibus justo, nec ornare elit fringilla vitae. Vivamus tempor non ipsum quis porta. Suspendisse in massa a nisi vulputate ornare. Curabitur sed mi vel dolor congue tincidunt quis in ipsum. Nunc ultrices augue aliquam, lacinia urna vitae, pretium urna. Morbi aliquet orci at lacus pharetra congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed mattis diam. Donec eu ipsum imperdiet, interdum purus molestie, dignissim ex. Vestibulum aliquet, mauris eget ultrices scelerisque, nisi nisi venenatis purus, ut ullamcorper libero nisl sit amet mi.</Text>
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
@@ -33,8 +37,8 @@ const styles = StyleSheet.create({
     //x-axis
     alignItems: 'center',
     //y-axis
-    justifyContent:'flex-start',
-    paddingTop:100,
+    justifyContent: 'flex-start',
+    paddingTop: 100,
   },
   title: {
     fontSize: 35,
@@ -48,17 +52,35 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "#28667c",
     paddingTop: 10,
-    paddingBottom:10,
-    paddingLeft:15,
-    paddingRight:15,
-    margin:10,
+    paddingBottom: 10,
+    paddingLeft: 15,
+    paddingRight: 15,
+    margin: 10,
   },
-  buttonText:{
+  buttonText: {
     color: "white",
-    fontSize:20
+    fontSize: 20
   },
-  email:{
+  email: {
+    fontSize: 18,
+  },
+  prompt: {
+    backgroundColor: '#fff',
+    marginLeft: 50,
+    marginRight: 50,
+    marginTop: 10,
+    margin: 50,
+    padding: 20,
+  },
+  promptText: {
     fontSize:18,
+    lineHeight:30,
+  },
+  promptTitle: {
+    paddingBottom: 10,
+    fontSize: 20,
+    lineHeight:30,
+    fontWeight:"bold",
   }
 
 });
